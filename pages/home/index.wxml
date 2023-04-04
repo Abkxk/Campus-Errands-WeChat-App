@@ -1,0 +1,54 @@
+<view class="page">
+  <i-notice-bar icon="systemprompt" loop closable speed="10000">
+    {{announcement}}
+  </i-notice-bar>
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+        duration="{{duration}}">
+        <block wx:for="{{advertising}}" wx:key="key"  wx:for-index="idx" wx:for-item="item">
+          <swiper-item wx:if="{{idx<5}}">
+            <view class="swiper-item">
+              <image style="width: 100vh;" src="{{url}}{{item.path}}"></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!--主盒子-->
+  <view class="container">
+    <!-- 左侧栏 -->
+    <view class='nav_left'>
+      <view class="nav_left_items {{curNav == 1 ? 'active' : ''}}" bindtap="switchRightTab" data-id="1">
+        全部
+      </view>
+      <view class="nav_left_items {{curNav == 2 ? 'active' : ''}}" bindtap="switchRightTab" data-id="2">
+        代买
+      </view>
+      <view class="nav_left_items {{curNav == 3 ? 'active' : ''}}" bindtap="switchRightTab" data-id="3">
+        代拿
+      </view>
+      <view class="nav_left_items {{curNav == 4 ? 'active' : ''}}" bindtap="switchRightTab" data-id="4">
+        代办
+      </view>
+      <view class="nav_left_items {{curNav == 5 ? 'active' : ''}}" bindtap="switchRightTab" data-id="5">
+        其它
+      </view>
+    </view>
+    <!-- 右侧栏 -->
+    <view class="nav_right">
+      <view wx:for="{{list}}" wx:key="key" style="position: relative;margin: 5px 0px;">
+        <i-card i-class="card" title="{{item.nickName}}" thumb="{{item.avatarUrl}}">
+          <view slot="content">需求: {{item.ms}}</view>
+          <view slot="content">类型: {{item.type}}</view>
+          <view slot="content">价格: {{item.money}}</view>
+          <view slot="footer">{{item.date}}</view>
+        </i-card>
+        <view style="position: absolute;right:27px;top:5px;">
+          <button wx:if="{{type!='用户'}}" bindtap="jd" data-id="{{item.id}}" type="primary" size="mini">接单</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

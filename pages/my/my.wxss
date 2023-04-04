@@ -1,0 +1,49 @@
+page{
+  font-size: 30rpx;
+  background: #ECECEC;
+}
+.header{
+  height: 300rpx;
+  background: #687EEB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header1{
+  height: 150rpx;
+  background: #687EEB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #888888
+}
+.header1 button{
+  border: 1px solid transparent;
+background-color: #687EEB;
+color: white;
+
+}
+.header .userImg{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius:120rpx;
+  border: 8rpx solid rgb(192, 225, 245); 
+  margin-bottom: 30rpx;
+}
+
+.content .coupon,.content .signOut,
+.content .address,.content .tel{
+  background: white;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-left: 15rpx; 
+}
+.content .coupon,.content .signOut{ 
+  margin: 15rpx 0;
+}
+.content .signOut{
+  text-align: center;
+}

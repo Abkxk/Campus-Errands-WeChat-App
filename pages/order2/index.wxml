@@ -1,0 +1,16 @@
+<view wx:for="{{list}}" style="position: relative;margin: 5px 0px;">
+  <i-card i-class="card" title="{{item.nickName}}" extra="{{item.status}}" thumb="{{item.avatarUrl}}">
+    <view slot="content">
+      <button style="margin-right: 10px;" wx:if="{{item.status == '已接单'}}" bindtap="upl" data-type="进行中" data-ids="{{item.id}}" data-id="{{item.ids}}"
+        type="primary" size="mini">开始任务</button>
+      <button wx:if="{{item.status == '已接单'}}" bindtap="del" data-id="{{item.ids}}" type="warn"
+        size="mini">取消订单</button>
+      <button wx:if="{{item.status == '进行中'}}" bindtap="upl" data-ids="{{item.id}}" data-type="任务完成" data-id="{{item.ids}}" type="primary"
+        size="mini">任务完成</button>
+    </view>
+    <view slot="content">需求: {{item.ms}}</view>
+    <view slot="content">类型: {{item.type}}</view>
+    <view slot="content">价格: {{item.money}}</view>
+    <view slot="footer">{{item.date}}</view>
+  </i-card>
+</view>

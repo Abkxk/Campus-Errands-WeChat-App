@@ -1,0 +1,20 @@
+<view>
+  <i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="待接单" title="待接单"></i-tab>
+    <i-tab key="已接单" title="已接单"></i-tab>
+    <i-tab key="进行中" title="进行中"></i-tab>
+    <i-tab key="任务完成" title="任务完成"></i-tab>
+    <i-tab key="确认收货" title="确认收货"></i-tab>
+  </i-tabs>
+</view>
+<view wx:for="{{list}}" style="position: relative;margin: 5px 0px;">
+    <i-card i-class="card" title="{{item.nickName}}" thumb="{{item.avatarUrl}}">
+          <view slot="content">需求: {{item.ms}}</view>
+          <view slot="content">类型: {{item.type}}</view>
+          <view slot="content">价格: {{item.money}}</view>
+          <view slot="footer">{{item.date}}</view>
+        </i-card>
+        <view style="position: absolute;right: 27px;top: 21px;" wx:if="{{item.status == '任务完成'}}">
+          <button bindtap="sh" data-money="{{item.money}}" data-id="{{item.id}}" type="primary" size="mini">确认收货</button>
+        </view>
+  </view>

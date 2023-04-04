@@ -1,0 +1,14 @@
+<view style="    margin: 0 auto;text-align: center;">
+  <view style="    margin: 20px 0px;">
+    <view class="view" bindtap="type" data-type="用户">
+      <image src="/pages/image/用户.png"></image>
+    </view>
+    <text style="    color: #1c2438;">用户</text>
+  </view>
+  <view style="    margin: 20px 0px;">
+    <view class="view" bindtap="type" data-type="跑腿员">
+      <image src="/pages/image/跑腿APP.png"></image>
+    </view>
+    <text style="color: #1c2438;">跑腿员</text>
+  </view>
+</view>

@@ -1,0 +1,103 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/index",
+    "pages/problem/index",
+    "pages/my/my",
+    "pages/gr/index",
+    "pages/feedback/index",
+    "pages/type/index",
+    "pages/order/index",
+    "pages/addOrder/index",
+    "pages/order1/index",
+    "pages/order2/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#687EEB",
+    "navigationBarTitleText": "校园跑腿",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "pages/image/home.png",
+        "selectedIconPath": "pages/image/home-selectd.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "pages/image/my.png",
+        "selectedIconPath": "pages/image/my-selectd.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-row": "/dist/row/index",
+    "i-col": "/dist/col/index",
+    "i-grid": "/dist/grid/index",
+    "i-grid-item": "/dist/grid-item/index",
+    "i-grid-icon": "/dist/grid-icon/index",
+    "i-grid-label": "/dist/grid-label/index",
+    "i-panel": "/dist/panel/index",
+    "i-cell-group": "/dist/cell-group/index",
+    "i-cell": "/dist/cell/index",
+    "i-card": "/dist/card/index",
+    "i-button": "/dist/button/index",
+    "i-icon": "/dist/icon/index",
+    "i-tab-bar": "/dist/tab-bar/index",
+    "i-tab-bar-item": "/dist/tab-bar-item/index",
+    "i-tabs": "/dist/tabs/index",
+    "i-tab": "/dist/tab/index",
+    "i-drawer": "/dist/drawer/index",
+    "i-page": "/dist/page/index",
+    "i-steps": "/dist/steps/index",
+    "i-step": "/dist/step/index",
+    "i-notice-bar": "/dist/notice-bar/index",
+    "i-index": "/dist/index/index",
+    "i-index-item": "/dist/index-item/index",
+    "i-sticky": "/dist/sticky/index",
+    "i-sticky-item": "/dist/sticky-item/index",
+    "i-action-sheet": "/dist/action-sheet/index",
+    "i-toast": "/dist/toast/index",
+    "i-modal": "/dist/modal/index",
+    "i-message": "/dist/message/index",
+    "i-spin": "/dist/spin/index",
+    "i-swipeout": "/dist/swipeout/index",
+    "i-badge": "/dist/badge/index",
+    "i-alert": "/dist/alert/index",
+    "i-tag": "/dist/tag/index",
+    "i-progress": "/dist/progress/index",
+    "i-avatar": "/dist/avatar/index",
+    "i-collapse": "/dist/collapse/index",
+    "i-collapse-item": "/dist/collapse-item/index",
+    "i-count-down": "/dist/count-down/index",
+    "i-divider": "/dist/divider/index",
+    "i-load-more": "/dist/load-more/index",
+    "i-input": "/dist/input/index",
+    "i-radio-group": "/dist/radio-group/index",
+    "i-radio": "/dist/radio/index",
+    "i-checkbox-group": "/dist/checkbox-group/index",
+    "i-checkbox": "/dist/checkbox/index",
+    "i-switch": "/dist/switch/index",
+    "i-rate": "/dist/rate/index",
+    "i-input-number": "/dist/input-number/index",
+    "mp-toptips": "/common/toptips/toptips",
+    "mp-cells": "/common/cells/cells",
+    "mp-cell": "/common/cell/cell",
+    "mp-checkbox": "/common/checkbox/checkbox",
+    "mp-checkbox-group": "/common/checkbox-group/checkbox-group",
+    "mp-form": "/common/form/form",
+    "mp-uploader": "/common/uploader/uploader",
+    "mp-searchbar": "/common/searchbar/searchbar"
+  }
+}

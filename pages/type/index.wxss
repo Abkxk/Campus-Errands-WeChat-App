@@ -1,0 +1,17 @@
+.view{
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  background: #687EEB;
+    border-radius: 50%;
+  margin: 0 auto;
+}
+
+image{
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-self: center;
+}

@@ -1,0 +1,25 @@
+@import 'style/weui.wxss';
+.notEmptyClass:after{
+  content:' * '; color: red;
+}
+
+.validateText{
+  visibility:hidden; 
+  position: absolute;  
+  color: red;
+  border: 1px solid #dfdfdf;
+  width: 200px;  
+  min-height: 25px;
+  box-shadow: 2px 2px 2px #888888;
+  border-radius:5px;  
+  display: flex;  
+  align-items:flex-start;
+  justify-content:flex-end;
+  padding: 5px;
+  background-color: #ffffff;
+  opacity:0.87; 
+  z-index: 999; 
+}
+.validateText:before{
+  content: '* ';  
+}

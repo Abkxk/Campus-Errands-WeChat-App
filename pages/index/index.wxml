@@ -1,0 +1,10 @@
+
+<!--pages/login/login.wxml-->
+<view class="container"> 
+  <view class="login-icon">  
+    <image class="login-img" src="/pages/image/logo.jpg"></image>  
+  </view>  
+  <view class="login-from">  
+    <button style="background: #687EEB;margin-top: 10px;" type="primary" bindtap="handleClick" size="16" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信一键登录</button>
+  </view>  
+</view> 

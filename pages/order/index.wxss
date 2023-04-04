@@ -1,0 +1,10 @@
+.add{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  right: 0px;
+  bottom: 100rpx;
+  margin-right: 10px;
+  z-index: 99999;
+}

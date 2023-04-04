@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="header">
+    <view>
+      <image class="userImg" src="{{user.avatarUrl}}"></image>
+    </view>
+  </view>
+  <i-panel title="">
+    <i-input value="{{ user.nickName }}" title="昵称" bind:change="nickName" autofocus placeholder="昵称" />
+    <i-cell title="性别">
+      <i-switch value="{{user.gender==1}}" size="large" bind:change="onChange" slot="footer">
+        <view slot="open">男</view>
+        <view slot="close">女</view>
+      </i-switch>
+    </i-cell>
+    <i-input type="number" value="{{ user.age }}" title="年龄" bind:change="age" placeholder="年龄" />
+    <button style="    margin: 10px auto;" type="primary" bindtap="save">保存</button>
+  </i-panel>
+</view>

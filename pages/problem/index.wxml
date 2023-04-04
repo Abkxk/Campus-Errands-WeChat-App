@@ -1,0 +1,16 @@
+<view class="caption-wrap">
+	<i-collapse name="name1">
+		<view wx:for="{{data}}">
+			<i-collapse-item i-class="aaa" name="name1" title="{{item.title}}" wx:if="{{index == 0}}">
+				<view slot="content">
+					{{item.content}}
+				</view>
+			</i-collapse-item>
+			<i-collapse-item i-class="aaa" title="{{item.title}}" wx:else>
+				<view slot="content">
+					{{item.content}}
+				</view>
+			</i-collapse-item>
+		</view>
+	</i-collapse>
+</view>

@@ -1,0 +1,14 @@
+<view>
+  <view wx:for="{{list}}" style="position: relative;margin: 5px 0px;">
+    <i-card i-class="card" title="{{item.nickName}}" thumb="{{item.avatarUrl}}" extra="{{item.status}}" >
+      <view slot="content" wx:if="{{item.status == '待接单' || item.status == '确认收货'}}">  <button bindtap="del" data-id="{{item.id}}" type="warn" size="mini">删除</button></view>
+          <view slot="content">需求: {{item.ms}}</view>
+          <view slot="content">类型: {{item.type}}</view>
+          <view slot="content">价格: {{item.money}}</view>
+          <view slot="footer">{{item.date}}</view>
+        </i-card>
+  </view>
+</view>
+<view>
+  <image src="../image/0c135d795a24bd712ce2b90a1efb8e3e.jpeg" class="add" bindtap="add"></image>
+</view>

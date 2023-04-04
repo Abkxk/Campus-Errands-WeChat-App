@@ -1,0 +1,43 @@
+<view class="container" wx:if="{{user!=null}}">
+	<view class="header">
+		<view>
+			<image class="userImg" src="{{user.avatarUrl}}"></image>
+		</view>
+		<view class="userName">{{user.nickName}}</view>
+	</view>
+	<view wx:if="{{type != '用户'}}">
+		<i-grid>
+			<i-grid-item bindtap="bb">
+				<i-grid-label><text style="color: red;font-family: none; font-style: italic; font-weight: bold;">$ {{map.money1}}</text></i-grid-label>
+				<i-grid-label>跑腿币</i-grid-label>
+			</i-grid-item>
+			<i-grid-item>
+				<i-grid-label><text style="    color: red;font-family: none; font-style: italic; font-weight: bold;">$ {{map.money2}}</text></i-grid-label>
+				<i-grid-label>账户余额</i-grid-label>
+			</i-grid-item>
+		</i-grid>
+	</view>
+	<i-cell-group>
+		<i-cell title="个人信息" is-link url="/pages/gr/index"></i-cell>
+		<i-cell wx:if="{{type == '用户'}}" title="我的发布" is-link url="/pages/order/index"></i-cell>
+		<i-cell wx:if="{{type == '用户'}}" title="我的订单" is-link url="/pages/order1/index"></i-cell>
+		<i-cell wx:if="{{type != '用户'}}" title="我的订单" is-link url="/pages/order2/index"></i-cell>
+		<i-cell title="我的反馈" is-link url="/pages/feedback/index"></i-cell>
+		<i-cell title="常见问题" is-link url="/pages/problem/index"></i-cell>
+		<i-cell title="电话客服" is-link bind:click="phone"></i-cell>
+		<i-cell title="退出账号" bindtap="dropOut"></i-cell>
+	</i-cell-group>
+</view>
+<view class="container" wx:else>
+	<view class="header1"><button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点击授权</button></view>
+</view>
+<loading hidden="{{hidden}}">
+	加载中...
+</loading>
+<i-modal title="提现金额" visible="{{ visible1 }}" bind:ok="pay" bind:cancel="handleClose1">
+	<mp-cells>
+        <mp-cell prop="money" title="金额" ext-class="">
+          <input type="number" value="{{money}}" bindinput="mon" class="weui-input" placeholder="请输入提现金额" />
+        </mp-cell>
+      </mp-cells>
+</i-modal>
